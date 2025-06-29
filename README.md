@@ -81,3 +81,21 @@ This project involves collaboration among various team members, each with specif
 
     Ensures project is aligned with goals and learning outcomes.
 
+
+🧰 Technology Stack
+
+This project uses a collection of technologies across backend, frontend, and deployment layers. Each tool plays a critical role in building and running the AirBnB clone.
+Technology	Description
+Python	The core programming language used to build the backend logic and data models.
+Flask	A lightweight Python web framework used to create RESTful APIs and serve dynamic web pages.
+MySQL	Relational database used to store user, property, booking, and review data.
+SQLAlchemy	ORM (Object-Relational Mapper) used to interact with the database using Python objects instead of raw SQL.
+HTML/CSS	Used to build and style the user interface of the website.
+Jinja2	Templating engine integrated with Flask to dynamically generate HTML pages from Python.
+JavaScript	Enables client-side interactivity, form validation, and dynamic page behavior.
+Git	Version control system for tracking source code changes and enabling team collaboration.
+GitHub	Online Git repository hosting platform used for source control and project collaboration.
+Linux/Ubuntu	Operating system used for deployment and testing of the project in a production-like environment.
+Nginx	A web server used as a reverse proxy to serve the Flask app in production.
+Gunicorn	A WSGI HTTP server for running Python web applications in production with high performance.
+Docker (optional)	Containerization platform that ensures consistency across development and production environments.
