@@ -214,3 +214,53 @@ A payment:
 - A **Booking** is linked to one **User** and one **Property**
 - A **Review** is tied to one **User** and one **Property**
 - A **Payment** is tied to one **Booking**
+- 
+
+
+### 🧩 Feature Breakdown
+
+This section outlines the key features implemented in the AirBnB Clone project. Each feature contributes to building a realistic, end-to-end accommodation booking platform.
+
+------
+
+#### 🔐 **User Management**
+
+Enables users to register, log in, and manage their profile securely. This includes password hashing, authentication mechanisms, and session handling to ensure user data is protected.
+
+------
+
+#### 🏠 **Property Management**
+
+Allows users to list properties with details like title, location, price, and description. Property owners can update or delete listings, giving them full control over their rental offerings.
+
+------
+
+#### 📅 **Booking System**
+
+Enables guests to book available properties by selecting check-in and check-out dates. It checks for availability, calculates total cost, and prevents double bookings.
+
+------
+
+#### 💳 **Payment Integration**
+
+Handles payments for confirmed bookings, simulating or integrating real-world payment processing. This ensures financial transactions are logged, secured, and associated with each booking.
+
+------
+
+#### ⭐ **Review and Rating System**
+
+Allows users to leave reviews and ratings after a stay. This helps build trust, encourages transparency, and gives property owners feedback to improve.
+
+------
+
+#### 🌐 **Web Interface (Frontend)**
+
+Provides a responsive and user-friendly interface for browsing properties, managing accounts, and making bookings. Built using HTML, CSS, and JavaScript, and rendered with Jinja2 templates.
+
+------
+
+#### 🛠️ **Command-Line Console (for Admin/Dev Use)**
+
+A CLI tool to interact with the application’s models and storage engine directly. It allows creating, reading, updating, and deleting (CRUD) operations during development or testing.
+
+------
