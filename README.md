@@ -101,3 +101,116 @@ This project uses a collection of technologies across backend, frontend, and dep
 | **Nginx**               | A web server used as a reverse proxy to serve the Flask app in production. |
 | **Gunicorn**            | A WSGI HTTP server for running Python web applications in production with high performance. |
 | **Docker** *(optional)* | Containerization platform that ensures consistency across development and production environments. |
+
+
+
+
+### 🗃️ Database Design
+
+The AirBnB clone project relies on a relational database structure. Below are the core entities (tables), key fields, and how they relate to each other.
+
+------
+
+#### 🔸 **User**
+
+Represents registered users of the platform.
+
+**Key Fields:**
+
+- `id` (Primary Key)
+- `full_name`
+- `email`
+- `password_hash`
+- `created_at`
+
+A user can:
+
+- Own multiple properties
+- Create multiple bookings
+- Leave reviews
+
+------
+
+#### 🔸 **Property**
+
+Represents listings that users can rent.
+
+**Key Fields:**
+
+- `id` (Primary Key)
+- `owner_id` (Foreign Key → User)
+- `title`
+- `location`
+- `price_per_night`
+
+A property:
+
+- Belongs to one user (owner)
+- Can have many bookings and reviews
+
+------
+
+#### 🔸 **Booking**
+
+Represents a reservation made by a user for a property.
+
+**Key Fields:**
+
+- `id` (Primary Key)
+- `user_id` (Foreign Key → User)
+- `property_id` (Foreign Key → Property)
+- `check_in_date`
+- `check_out_date`
+
+A booking:
+
+- Is linked to one user
+- Is linked to one property
+
+------
+
+#### 🔸 **Review**
+
+Captures feedback from users who have stayed at properties.
+
+**Key Fields:**
+
+- `id` (Primary Key)
+- `user_id` (Foreign Key → User)
+- `property_id` (Foreign Key → Property)
+- `rating` (e.g., 1 to 5)
+- `comment`
+
+A review:
+
+- Is written by a user
+- Is linked to a specific property
+
+------
+
+#### 🔸 **Payment**
+
+Records payments for bookings.
+
+**Key Fields:**
+
+- `id` (Primary Key)
+- `booking_id` (Foreign Key → Booking)
+- `amount`
+- `payment_status`
+- `timestamp`
+
+A payment:
+
+- Belongs to one booking
+- Ensures traceability of financial transactions
+
+------
+
+### 🔗 Entity Relationships Summary
+
+- A **User** can own many **Properties**
+- A **Property** can have many **Bookings** and **Reviews**
+- A **Booking** is linked to one **User** and one **Property**
+- A **Review** is tied to one **User** and one **Property**
+- A **Payment** is tied to one **Booking**
