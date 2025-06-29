@@ -326,3 +326,33 @@ While using mock or integrated payment services, all transactions will follow in
 Session tokens (or access tokens) will expire after a specific time or upon logout to reduce the risk of hijacked sessions.
 
 **Why it matters:** Reduces the chance of long-lived tokens being abused if leaked.
+
+
+### 🔄 CI/CD Pipeline
+
+**CI/CD (Continuous Integration and Continuous Deployment)** is a set of practices that automate the process of building, testing, and deploying code. It ensures that changes to the codebase are automatically verified and delivered to production or staging environments in a reliable and repeatable way.
+
+Implementing a CI/CD pipeline in this project helps:
+
+- ✅ Detect bugs early through automated tests on each push or pull request
+- ✅ Maintain code quality and consistency across the team
+- ✅ Automate deployments, reducing human error
+- ✅ Speed up the release cycle for new features and bug fixes
+
+------
+
+#### 🛠️ Tools That Can Be Used
+
+- **GitHub Actions** – Automates build, test, and deploy workflows directly from GitHub.
+- **Docker** – Ensures the app runs in a consistent environment across dev/staging/production.
+- **Pytest** – For running unit tests in the backend.
+- **Flake8 / Black** – For linting and formatting Python code automatically.
+- **Heroku / Render / DigitalOcean / AWS EC2** – As potential deployment environments.
+
+------
+
+### 📌 Sample Pipeline Flow (Future Implementation)
+
+```
+[ GitHub Push ] → [ Lint & Unit Tests Run via GitHub Actions ] → [ Docker Build ] → [ Staging Deployment ] → [ Production Deployment (Manual or Auto) ]
+```
