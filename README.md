@@ -264,3 +264,65 @@ Provides a responsive and user-friendly interface for browsing properties, manag
 A CLI tool to interact with the application’s models and storage engine directly. It allows creating, reading, updating, and deleting (CRUD) operations during development or testing.
 
 ------
+
+
+
+### 🔐 API Security
+
+Securing backend APIs is essential for protecting user data, ensuring platform integrity, and building trust in the system. The AirBnB Clone project will implement several critical security measures:
+
+------
+
+#### ✅ **Authentication**
+
+All sensitive routes will require user authentication (e.g., via token-based methods like JWT). This ensures that only verified users can access protected resources such as bookings or payment history.
+
+**Why it matters:** Prevents unauthorized access to user accounts and protects personal data.
+
+------
+
+#### ✅ **Authorization**
+
+Role-based access control will be enforced to restrict actions based on user roles (e.g., only property owners can update/delete their listings).
+
+**Why it matters:** Maintains platform integrity and prevents misuse of privileged features.
+
+------
+
+#### ✅ **Rate Limiting**
+
+Limits the number of requests a client can make to the API within a specific time frame. Helps protect against brute-force attacks and abuse of public endpoints.
+
+**Why it matters:** Enhances system stability and protects from denial-of-service (DoS) threats.
+
+------
+
+#### ✅ **Input Validation & Sanitization**
+
+All inputs will be validated on the server side to avoid injection attacks (e.g., SQL injection or XSS). This includes data types, required fields, and format checks.
+
+**Why it matters:** Prevents malicious inputs that can corrupt the database or expose vulnerabilities.
+
+------
+
+#### ✅ **HTTPS (TLS Encryption)**
+
+All API communications will be encrypted using HTTPS to protect data in transit.
+
+**Why it matters:** Ensures that sensitive data like passwords, tokens, and payments are not exposed to attackers during transmission.
+
+------
+
+#### ✅ **Secure Payment Handling**
+
+While using mock or integrated payment services, all transactions will follow industry best practices including tokenization and redirection to secure payment gateways.
+
+**Why it matters:** Protects user financial data and prevents fraud.
+
+------
+
+#### ✅ **Session and Token Expiry**
+
+Session tokens (or access tokens) will expire after a specific time or upon logout to reduce the risk of hijacked sessions.
+
+**Why it matters:** Reduces the chance of long-lived tokens being abused if leaked.
